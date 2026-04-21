@@ -133,19 +133,19 @@ var QUOTES = {
     "This proposal is a disaster. 睡桥洞去吧，顺便想想怎么重写。",
     "垃圾，睡桥洞去吧，梦里可能会有灵感。",
     "你们都会被AI取代的，而且AI不需要睡桥洞。",
-    "Buzzword检出率爆表，请稍微动一下脑子。"
+    "AI屎成分检出率爆表。"
   ],
   bad: [
-    "Buzzword检出率偏高，请稍微动一下脑子。",
-    "逻辑链存在断裂，argument不知所云。动一动脑子好吗？",
-    "这不是proposal，这是buzzword大乱炖。Needs work.",
+    "请稍微动一下您尊贵的脑子吧，求求了！",
+    "逻辑链存在断裂，不知所云。动一动脑子好吗？",
+    "这不是proposal，这是AI大乱炖。Needs work.",
     "你们都会被AI取代的，而且AI至少逻辑自洽。",
     "结构性问题明显。This needs serious rethinking."
   ],
   ok: [
-    "勉强及格。Still room for improvement，但至少没睡桥洞的必要。",
-    "Logic基本自洽，没检测到明显屎山。继续保持。",
-    "过关。不算惊艳，但至少不是disaster。"
+    "Still room for improvement，但至少没睡桥洞的必要。",
+    "没检测到明显屎山，也可能是浓度不够。",
+    "要庆幸这至少不是disaster。"
   ]
 };
 
@@ -306,13 +306,13 @@ function detect() {
   score = Math.min(score, 100);
 
   var level, label;
-  if (score >= 60)      { level = 'shit'; label = '一坨屎'; }
-  else if (score >= 25) { level = 'bad';  label = '有待商榷'; }
-  else                  { level = 'ok';   label = '勉强过关'; }
+  if (score >= 60)      { level = 'shit'; label = '一坨巨大的屎'; }
+  else if (score >= 25) { level = 'bad';  label = '有待商榷的屎'; }
+  else                  { level = 'ok';   label = '勉强过关的屎'; }
 
   var detectedHTML = detected.length
-    ? '检测到：' + detected.map(function(w) { return '<span>' + w + '</span>'; }).join('')
-    : '未检测到明显问题词汇';
+    ? '检测到一些屎的气息'
+    : '未检测到明显屎的痕迹';
 
   var finalQuotes = [];
 
